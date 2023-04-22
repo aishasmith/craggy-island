@@ -1,0 +1,80 @@
+
+/*--------------------------------CSS Spreadsheet----------------------------*/
+
+/*-------------------------- Responsive Flex Gallery -------------------------------*/
+*{
+    
+    font-family: 'Arimo', sans-serif;
+}
+
+
+body{
+  background:#f1f1f1;;
+
+}
+
+.flex-container {
+  padding-top: 100px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+row {
+  width: 100%;
+}
+.flex-item {
+  padding: 30px;
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+
+.gallery-image {
+  height: 200px;
+  width: 200px;
+}
+
+/*===========================Media Queries==========================*/
+
+/*IPhone 12 @ 390 pixels max-width 480px pixels height (aprox.)*/
+
+@media only screen 
+and (min-device-width: 390px) 
+and (max-width: 480px) and (orientation: portrait) {
+
+/* Image container */
+
+.span.flex-item {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 30px;
+}
+
+/* image */
+
+img.gallery-image {
+  
+  width: 300px;
+  height: 200px;
+  overflow-y: hidden;
+}
+/* image title */
+
+h2.genre-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  position: relative;
+  top: -20px;
+ }
+}

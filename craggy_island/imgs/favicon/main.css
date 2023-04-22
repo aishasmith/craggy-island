@@ -1,0 +1,366 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin-top: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #f1f1f1;
+    font-family: sans-serif;
+}
+
+ /* Navbar */
+
+ .navSection {
+  background-color: #871b1b;
+ }
+
+ /* Navbar */
+ .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+} /* Fixed to the top with full 100% width*/
+
+.navbar li {
+  display: inline-block;
+  padding: 5px;
+  color: #000000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* End of Navbar */
+
+/* navbar hover effects */
+
+a {
+  color: #070606;
+}/*initial link text colour*/
+
+a:visited {
+  color: #d9910d;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 1.2em;
+} /*initial link text colour after visit*/
+
+a:hover {
+  text-decoration: none;
+  color: rgb(135, 19, 19);
+} /*initial link text colour hovering*/
+
+/* End of hover effects */
+
+ /* Hero Image and Container */
+
+.hero-image {
+  position: relative; /*positioned relative to its normal position*/
+  height: 500px;
+  overflow: hidden; /* property controls size and fit*/
+  background: url(../imgs/pexels-vishnu-r-nair-1105666.jpg ) no-repeat center;
+  background-size: cover;
+  margin-top: 60px;
+  filter: black;
+}
+
+ .container {
+   position: absolute; /*positioned relative to the nearest positioned ancestor*/
+   top: 50%;
+   left: 50%;
+   width: 100%;
+   height: 500px;
+   transform: translate( -50%, -50%); /*allows you to change the position of elements*/
+   text-align: center;
+   color: #f1f1f1;
+   font-weight: 700;
+   text-transform: uppercase;
+   box-shadow: 0 10px 20px rgb(40, 40, 40, 40);
+}
+
+ .container {
+   font-size: 72px;
+   letter-spacing: 0.2em;
+   margin: 0;
+}
+
+ .container h1 {
+   font-size: 72px;
+   border: 10px solid #f1f1f1;
+   padding: 6px 14px;
+   display: inline-block;
+}
+
+  /* Hero Image Description */
+
+ .des {
+   margin: 20px;
+   display: block;
+   font-size: 16px;
+   text-shadow: 0 0 10px #000000;
+   letter-spacing: normal;
+}
+
+  /* Hero Image Button */
+
+ .btn {
+   color: #f1f1f1;
+   padding: 10px 24px;
+   font-size: 20px;
+   text-decoration: none;
+   background-color: rgb(106, 32, 32);
+   border-radius: 8px;
+   transition: 0.3s all; /*allows you to change property values smoothly, over a given duration*/
+
+}
+
+ .btn:hover {
+   opacity: 0.8;
+ }
+
+/* End of Hero Image styling */
+
+/* gallery section*/
+ .musicGenre {
+  background-color: #f1f1f1;
+  height: 700px;
+} 
+
+.genre-title {
+ display: flex;
+ position: relative;
+ padding-bottom: 50px;
+ padding-left: 14px;
+ 
+}
+/* position the container*/
+.flex-container .row {
+  padding-top: 60px;
+}
+/*Gallery section bg colour*/
+
+.gallery-image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-image:hover+span {
+  bottom: -36%;
+  opacity: 1;
+}
+
+.gallery-image img {
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}/* allows coder to transform and element in (2D) or (3D) space.*/ /*the transition effect will start when the specified CSS property changes*/
+
+ .gallery-image:hover {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+} /* Hover Zooms the Images forward and defines a transformation that resizes an element on the 2D plane.*/
+
+.gallery-image img {
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ opacity: 0;
+ transition: opacity 0.4s ease-in-out;
+ background: #000000;
+ cursor: pointer;
+}
+
+/* End of gallery*/
+
+/* Music video*/
+.mediaSection {
+
+ height: 500px;
+}
+.container-video {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+padding-top: 100px;
+  
+}
+
+  /* Footer*/
+
+  .footer {
+    height: 50px;
+    margin-top: -50px;
+  }/* negative margin */
+  
+  /*===========================Media Queries==========================*/
+
+/*390 pixels width 844 pixels height (aprox.)*/
+
+
+  @media only screen and (device-width: 390px) 
+  and (device-height: 844px) 
+  and (-webkit-device-pixel-ratio: 3){
+    
+    body, html {
+      height: 100%;
+      width: 98%;
+      margin-top: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #f1f1f1;
+      font-family: sans-serif;
+  }
+
+  /* layout */
+
+  .content {
+    min-height: 100%;
+  }
+  .content-inside {
+    padding: 20px;
+    padding-bottom: 50px;
+  }
+  .footer {
+    height: 50px;
+    margin-top: -50px;
+  }
+
+  .hero-image {
+    position: relative;
+    height: 500px;
+    overflow: hidden; 
+  }
+  
+   .container {
+     position: absolute; 
+     width: 100%;
+     text-align: center;
+     color: #f1f1f1;
+     font-weight: 700;
+    
+  }
+  
+   .container {
+     letter-spacing: 1px;
+     margin: 0;
+  }
+  
+   .container h1 {
+     font-size: 60px;
+     border: 10px solid #f1f1f1;
+     padding: 6px 14px;
+     display: inline-block;
+  }
+  
+
+   /* Navbar */
+
+  .navSection {
+    background-color: #871b1b;
+    height: 150px;
+    width: 100%;
+
+   }
+
+  /* Navbar */
+ .navbar {
+  background-color: #f1f1f1;
+  position: fixed;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  top: 0;
+  width: 98%;
+  z-index: 1;
+
+}
+
+.navbar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  color: #000000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+ 
+
+  
+}
+  /* Media Video */
+    .container-video {
+      display: flex;
+      flex-direction: row;
+      justify-content:space-around;
+      align-content: center;
+      padding-top: 600px;
+        
+      }
+
+  /* image container */
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-self: flex-end;
+  padding-top: 60px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+/* image */
+
+ img.gallery-image {
+  
+  width: 300px;
+  height: 200px;
+  overflow-y: hidden;
+
+}
+
+/* image title */
+
+.genre-title, h2 {
+  margin-left: 90px;
+}
+
+.content {
+  min-height: calc(100vh - 70px);
+}
+
+/* Footer*/
+
+.footer {
+  display: flex;
+  height: 50px;
+  padding-top: 40px;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+}/* negative margin */
+
+}
+
